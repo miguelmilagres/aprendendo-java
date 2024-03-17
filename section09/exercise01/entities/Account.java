@@ -17,7 +17,7 @@ public class Account {
 	public Account(int number, String holder, double balance) {
 		this.number = number;
 		this.holder = holder;
-		this.balance = balance;
+		deposit(balance);
 	}
 
 	public void deposit(double amount) {
@@ -25,7 +25,8 @@ public class Account {
 	}
 
 	public void withdraw(double amount) {
-		balance -= amount + 5;
+		double temp = (amount == 0) ? 0 : amount + 5;
+		balance -= temp; 
 	}
 
 	public String toString() {
