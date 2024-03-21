@@ -24,6 +24,14 @@ public class Worker {
         this.department = department;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
     public void addContract(HourContract contract) {
         contracts.add(contract);
     }
